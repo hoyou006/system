@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/system">
-    <file alias="qmldir">D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/system/qmldir</file>
-  </qresource>
-</RCC>
-

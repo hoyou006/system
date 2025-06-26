@@ -26,7 +26,7 @@ Item {
         Rectangle {
             Layout.preferredWidth: 150
             Layout.fillHeight: true
-            color: "black"
+            color: "#EEEEEE"
 
             ColumnLayout {
                 anchors.fill: parent
@@ -37,10 +37,14 @@ Item {
                 Rectangle {
                     Layout.alignment: Qt.AlignHCenter
                     Layout.topMargin: 20
-                    width: 80
-                    height: 80
-                    radius: width/2
-                    color: "#ffffff"
+                    width: 70
+                    height: 70
+                    Image {
+                        id: avatar
+                        source: "file:///D:\\Files\\c++\\qt\\system\\image\\bg.png"
+                        fillMode: Image.Stretch
+                        anchors.fill: parent
+                    }
                 }
 
                 // 导航按钮

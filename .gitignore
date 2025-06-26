@@ -1,5 +1,5 @@
 # Qt构建生成
-build-*/
+build/
 *.pro.user
 *.autosave
 

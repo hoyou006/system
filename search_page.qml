@@ -1,11 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Controls.Material 2.15
 
 Rectangle {
     id: root
-    color: "#f5f5f5"
-
+    color: "#EEEEEE"
+    Material.accent: "#409EFF"
     // 模拟后端返回数据（使用属性变量以便更新时触发界面刷新）
     property var searchResults: [
         { title: "Qt Quick开发指南", author: "张伟", year: 2022, available: true },
@@ -72,13 +73,14 @@ Rectangle {
                 Button {
                     text: "搜索"
                     Layout.preferredWidth: 100
-                    Layout.preferredHeight: 40
+                    Layout.preferredHeight: 50
                     Layout.alignment: Qt.AlignVCenter
+
                     font {
                         pixelSize: 14
                         bold: true
+                        letterSpacing: 1.5
                     }
-
                     contentItem: Text {
                         text: parent.text
                         font: parent.font
@@ -106,7 +108,9 @@ Rectangle {
             model: root.searchResults // 直接绑定到属性变量
 
             delegate: Rectangle {
-                width: ListView.view.width
+                border.color: "#E0E0E0"
+                border.width: 1
+                width: ListView.view.width-10
                 height: 80
                 radius: 5
                 color: "white"
@@ -168,6 +172,11 @@ Rectangle {
                     anchors.fill: parent
                     onClicked: detailPopup.show(modelData)
                 }
+            }
+            // 滚动条
+            ScrollBar.vertical: ScrollBar {
+                width: 6
+                policy: ScrollBar.AsNeeded
             }
         }
     }
@@ -263,11 +272,11 @@ Rectangle {
                 enabled: detailPopup.currentBook && detailPopup.currentBook.available
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: 200
-                Layout.preferredHeight: 40
+                Layout.preferredHeight: 50
 
                 background: Rectangle {
                     radius: 4
-                    color: "#cccccc"
+                    color: "#E0E0E0"
                 }
 
                 contentItem: Text {
