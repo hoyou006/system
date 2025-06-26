@@ -1,0 +1,82 @@
+# Qt构建生成
+build-*/
+*.pro.user
+*.autosave
+
+# 编译生成文件
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.qm
+
+# Qt Creator相关
+*.creator
+*.config
+*.files
+*.includes
+*.cxxflags
+*.moc
+*.qrc.d
+*.ui
+
+# 调试文件
+core
+core.*
+*.core
+*.stackdump
+*.gdb
+*.pyc
+
+# 临时文件
+*~
+*.bak
+*.swp
+*.tmp
+*.orig
+*.*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 依赖目录
+3rdparty/
+*.depend
+
+# QML缓存
+.qmlc
+.jsc
+
+# 部署目录
+deploy/
+
+# 日志文件
+*.log
+
+# 用户特定设置
+CMakeSettings.json
+
+# CMake生成
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+
+# 打包输出
+*.app
+*.dmg
+*.deb
+*.rpm
+*.msi
+*.zip
+*.tar.gz
+
+# 测试覆盖率
+*.gcda
+*.gcno
