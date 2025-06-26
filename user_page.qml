@@ -1,35 +1,96 @@
 import QtQuick 2.15
-import QtQuick.Controls
 import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15
 
 Item {
-    width: parent.width// 必须指定宽度
-    height: parent.height// 必须指定高度
+    id: root
+    width: parent.width
+    height: parent.height
+
+    // 状态管理
+    QtObject {
+        id: navState
+        property int currentIndex: 0
+    }
+
+    // 页面组件缓存
+    property Component searchPage: Qt.createComponent("search_page.qml")
+    property Component returnPage: Qt.createComponent("return_page.qml")
+    property Component historyPage: Qt.createComponent("history_page.qml")
 
     RowLayout {
         anchors.fill: parent
-        spacing: 10
+        spacing: 0
 
+        // ===== 左侧导航栏 =====
         Rectangle {
-            Layout.preferredWidth: 250
+            Layout.preferredWidth: 150
             Layout.fillHeight: true
-            border.color: "black"
+            color: "black"
 
             ColumnLayout {
                 anchors.fill: parent
-                spacing: 20
+                spacing: 15
+                anchors.margins: 10
 
-                Button { text: "查找"; Layout.alignment: Qt.AlignHCenter }
-                Button { text: "还书"; Layout.alignment: Qt.AlignHCenter }
-                Button { text: "历史记录"; Layout.alignment: Qt.AlignHCenter }
+                // 用户头像
+                Rectangle {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.topMargin: 20
+                    width: 80
+                    height: 80
+                    radius: width/2
+                    color: "#ffffff"
+                }
+
+                // 导航按钮
+                Column {
+                    Layout.fillWidth: true
+                    spacing: 8
+
+                    CustomButton {
+                        width: parent.width
+                        text: "查 找"
+                        buttonIndex: 0
+                        stateManager: navState
+                        onClicked: navState.currentIndex = 0
+                    }
+
+                    CustomButton {
+                        width: parent.width
+                        text: "还 书"
+                        buttonIndex: 1
+                        stateManager: navState
+                        onClicked: navState.currentIndex = 1
+                    }
+
+                    CustomButton {
+                        width: parent.width
+                        text: "历 史 记 录"
+                        buttonIndex: 2
+                        stateManager: navState
+                        onClicked: navState.currentIndex = 2
+                    }
+                }
+
+                Item { Layout.fillHeight: true }
             }
         }
-
-        Rectangle {
+        // ===== 右侧内容区 =====
+        Loader {
+            id: contentLoader
             Layout.fillWidth: true
             Layout.fillHeight: true
-            color: "yellow"
+            sourceComponent: {
+                if (navState.currentIndex === 0 && searchPage.status === Component.Ready) {
+                    return searchPage
+                } else if (navState.currentIndex === 1 && returnPage.status === Component.Ready) {
+                    return returnPage
+                } else if (historyPage.status === Component.Ready) {
+                    return historyPage
+                }
+                return null
+            }
         }
     }
 }
-//rectangle颜色的正确显示依赖于宽高的正确设置,最外层的item进去的其parent也不是window
