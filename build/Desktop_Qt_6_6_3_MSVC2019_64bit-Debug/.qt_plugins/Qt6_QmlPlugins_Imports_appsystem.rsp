@@ -1,0 +1,14 @@
+-rootPath
+D:/Files/c++/qt/system
+-cmake-output
+-output-file
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appsystem.cmake
+-importPath
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/system
+-importPath
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug
+-importPath
+D:/qt/6.6.3/msvc2019_64/./qml
+-qrcFiles
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/.rcc/qmake_system.qrc
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/.rcc/appsystem_raw_qml_0.qrc

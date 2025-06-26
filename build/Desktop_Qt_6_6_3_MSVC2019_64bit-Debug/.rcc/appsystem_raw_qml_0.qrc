@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="/qt/qml/system/">
+    <file alias="Main.qml">D:/Files/c++/qt/system/Main.qml</file>
+    <file alias="Bubble.qml">D:/Files/c++/qt/system/Bubble.qml</file>
+    <file alias="Button_normal.qml">D:/Files/c++/qt/system/Button_normal.qml</file>
+    <file alias="Custom_textinput.qml">D:/Files/c++/qt/system/Custom_textinput.qml</file>
+    <file alias="manager_page.qml">D:/Files/c++/qt/system/manager_page.qml</file>
+    <file alias="sign_in.qml">D:/Files/c++/qt/system/sign_in.qml</file>
+    <file alias="sign_up.qml">D:/Files/c++/qt/system/sign_up.qml</file>
+    <file alias="user_page.qml">D:/Files/c++/qt/system/user_page.qml</file>
+    <file alias="image.qrc">D:/Files/c++/qt/system/image.qrc</file>
+  </qresource>
+</RCC>
+

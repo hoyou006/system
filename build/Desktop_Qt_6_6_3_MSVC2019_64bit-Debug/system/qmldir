@@ -1,0 +1,8 @@
+module system
+typeinfo appsystem.qmltypes
+prefer :/qt/qml/system/
+Main 1.0 Main.qml
+Bubble 1.0 Bubble.qml
+Button_normal 1.0 Button_normal.qml
+Custom_textinput 1.0 Custom_textinput.qml
+

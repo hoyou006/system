@@ -1,0 +1,17 @@
+--bare
+-I
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug
+-I
+D:/qt/6.6.3/msvc2019_64/./qml
+--resource
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/.rcc/qmake_system.qrc
+--resource
+D:/Files/c++/qt/system/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/.rcc/appsystem_raw_qml_0.qrc
+D:/Files/c++/qt/system/Main.qml
+D:/Files/c++/qt/system/Bubble.qml
+D:/Files/c++/qt/system/Button_normal.qml
+D:/Files/c++/qt/system/Custom_textinput.qml
+D:/Files/c++/qt/system/manager_page.qml
+D:/Files/c++/qt/system/sign_in.qml
+D:/Files/c++/qt/system/sign_up.qml
+D:/Files/c++/qt/system/user_page.qml
