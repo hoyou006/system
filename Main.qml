@@ -11,7 +11,7 @@ maximumWidth: 800
     flags: Qt.Window | Qt.WindowTitleHint | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint
     StackView {
             id: s1
-            initialItem: "user_page.qml"  // 初始页面
+            initialItem: "sign_in.qml"  // 初始页面
             anchors.fill: parent
         }
 }
